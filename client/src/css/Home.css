@@ -1,0 +1,35 @@
+.data-cards{
+    /* display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px; */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: 600;
+
+}
+.data-details{
+    padding:60px;
+
+}
+.data-details.one:hover{
+    
+    background: rgba(0, 123, 255, 0.125); 
+    
+}
+.data-details.two:hover{
+    
+    background: rgba(255,7,58,.12549019607843137);
+  
+}
+.data-details.three:hover{
+    background: rgba(108,117,125,.06274509803921569);
+}
+.data-details.four:hover{
+    background:rgba(40,167,69,.12549019607843137);
+}
