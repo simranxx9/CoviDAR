@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import '../css/Home.css'
+import CoviIndia from './CoviIndia'
 class Home extends Component {
     state = {
-        data: ''
+        data: '',
+        vaccineCount: ''
     }
     async getCovidData() {
         const res = await fetch(`https://api.covid19india.org/data.json`);
         const resData = await res.json()
-        // console.log(resData.statewise)
+        const totalVaccine = resData.tested[resData.tested.length - 1].totaldosesadministered;
+        // console.log(totalVaccine)
         this.setState({
-            data: resData.statewise
+            data: resData.statewise,
+            vaccineCount: totalVaccine
         })
     }
     componentDidMount() {
@@ -22,7 +26,8 @@ class Home extends Component {
             <div>
                 Home COvid
                 {this.state.data && this.state.data.filter(res => res.state === "Total").map((res, ind) => {
-                    return (<h2 key={ind}>{res.lastupdatedtime}</h2>)
+                    return (<p key={ind}
+                        style={{ textAlign: "center", color: "#6c757d" }}>last updated at {' '}<br />{res.lastupdatedtime}{' '}IST</p>)
                 })}
                 {this.state.data && this.state.data.filter(res => res.state === "Total").
                     map((res, ind) => {
@@ -38,6 +43,10 @@ class Home extends Component {
                         )
 
                     })}
+                <ul className="data-cards">
+                    <li className="data-details four" style={{ color: "green" }}>total vaccination administered <br /><br />{this.state.vaccineCount}</li>
+                </ul>
+                <CoviIndia />
             </div>
         )
     }
