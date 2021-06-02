@@ -29,8 +29,8 @@ class Home extends Component {
                     return (<p key={ind}
                         style={{ textAlign: "center", color: "#6c757d" }}>last updated at {' '}<br />{res.lastupdatedtime}{' '}IST</p>)
                 })}
-                {this.state.data && this.state.data.filter(res => res.state === "Total").
-                    map((res, ind) => {
+                {this.state.data && this.state.data.filter(res => res.state === "Total")
+                    .map((res, ind) => {
 
                         return (
                             <ul className="data-cards" key={ind}>

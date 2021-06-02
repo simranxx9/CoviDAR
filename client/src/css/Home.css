@@ -15,6 +15,7 @@ flex-wrap: wrap;
 }
 .data-details{
     padding:60px;
+    width:100px;
 
 }
 .data-details.one{
