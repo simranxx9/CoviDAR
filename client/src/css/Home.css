@@ -44,7 +44,7 @@ padding: 40px;
 .data-back{
     width: 100%;
      height: auto;
-      opacity: 0.7 
+      /* opacity: 0.7  */
 }
 .data-back-img{
     width:100%
@@ -71,6 +71,17 @@ padding: 40px;
     font-family: sans-serif;
 
 }
+.data-jumbo-detail2{
+    position: absolute;
+    right:50px;
+    margin:20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    opacity: 1;
+
+}
 .data-covid{
     font-size: 24px;
     font-weight: 600;
@@ -84,4 +95,5 @@ padding: 40px;
     .data-jumbo{
         display:block
     }
+    
 }

@@ -27,6 +27,6 @@ table, th, td {
     margin:20px auto;
 }
 ::placeholder {
-    
+    color:#ff00ff;
     font-size: 18px;
   }

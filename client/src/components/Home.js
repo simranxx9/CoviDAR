@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import '../css/Home.css'
 import CoviIndia from './CoviIndia'
 import back from '../images/back2.jpg'
+import back3 from '../images/back3.jpg'
+
 
 class Home extends Component {
     state = {
@@ -60,10 +62,19 @@ class Home extends Component {
 
                     </div>
                 </div>
-                <ul className="data-cards">
-                    <li className="data-vaccine" style={{ color: "#22bb33" }}>total vaccination administered <br /><br /><span className="data-covid">
-                        {Number(parseInt(this.state.vaccineCount)).toLocaleString('en')}</span></li>
-                </ul>
+                <div className="data-jumbo">
+                    <ul className="data-cards vaccine" style={{ display: "flex", alignItems: "center", margin: "20px" }}>
+                        <li className="data-vaccine" style={{ color: "#22bb33" }}>total vaccination administered <br /><br /><span className="data-covid">
+                            {Number(parseInt(this.state.vaccineCount)).toLocaleString('en')}</span></li>
+                    </ul>
+                    <div className="data-jumbo-detail2">
+                        <h2>Vaccination Drive</h2>
+                        <p>Ready for your turn.</p>
+                    </div>
+                    <div className="data-back"><img src={back3} alt="" className="data-back-img" /></div>
+
+                </div>
+
                 <CoviIndia />
             </>
         )

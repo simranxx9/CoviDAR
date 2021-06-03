@@ -35,10 +35,10 @@ class CoviIndia extends Component {
         if (this.state.data) {
             return (
                 <div>
-
+                    <h1 style={{ textAlign: "center", margin: "20px" }}>Statewise Data</h1>
                     <input type="text" className="input-search"
                         onChange={this.handleChange} id="searchState"
-                        placeholder="Search your state" />
+                        placeholder="Search your state..." />
                     <table style={{ width: "70%", overflow: "scroll", margin: "10px auto" }}>
                         <tbody>
                             <tr>
