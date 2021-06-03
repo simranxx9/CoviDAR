@@ -20,3 +20,13 @@ table, th, td {
 .table-head{
     background-color:rgba(93, 100, 107, 0.063) ;
 }
+.input-search{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    margin:20px auto;
+}
+::placeholder {
+    
+    font-size: 18px;
+  }

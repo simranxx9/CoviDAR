@@ -28,11 +28,15 @@ class Home extends Component {
             <>
                 <div className="data-jumbo">
                     <div className="data-back"><img src={back} alt="" className="data-back-img" /></div>
-                    <div className="data-jumbo-detail">CORONA</div>
+                    <div className="data-jumbo-detail">
+                        <h2>CORONA VIRUS(Covid19)</h2>
+                        <p>SARS-Cov-2 Virus</p>
+                    </div>
                     <div className="data-top">
+                        <h1 style={{ display: "flex", justifyContent: "center", margin: "20px auto", fontSize: "48px", fontWeight: "600" }}>INDIA</h1>
                         {this.state.data && this.state.data.filter(res => res.state === "Total").map((res, ind) => {
                             return (<p key={ind}
-                                style={{ textAlign: "center", color: "#6c757d" }}>last updated at {' '}<br />{res.lastupdatedtime}{' '}IST</p>)
+                                style={{ textAlign: "center", color: "#6c757d", margin: "20px 0" }}>last updated at {' '}<br />{res.lastupdatedtime}{' '}IST</p>)
                         })}
                         {this.state.data && this.state.data.filter(res => res.state === "Total")
                             .map((res, ind) => {
@@ -40,10 +44,15 @@ class Home extends Component {
                                 return (
                                     <ul className="data-cards" key={ind}>
 
-                                        <li className="data-details one" style={{ color: "blue" }}>active <br /><br /><span className="data-covid">{res.active}</span></li>
-                                        <li className="data-details two" style={{ color: "red" }}>confirmed <br /><br /><span className="data-covid">{res.confirmed}</span></li>
-                                        <li className="data-details three" style={{ color: "#888" }}>deaths <br /><br /><span className="data-covid">{res.deaths}</span></li>
-                                        <li className="data-details four" style={{ color: "green" }}>recovered <br /><br /><span className="data-covid">{res.recovered}</span></li>
+                                        <li className="data-details one" style={{ color: "blue" }}>active <br /><br /><span className="data-covid">
+                                            {Number(parseInt(res.active)).toLocaleString('en')}</span></li>
+                                        <li className="data-details two" style={{ color: "red" }}>confirmed <br /><br /><span className="data-covid">
+                                            {Number(parseInt(res.confirmed)).toLocaleString('en')}
+                                        </span></li>
+                                        <li className="data-details three" style={{ color: "#888" }}>deceased <br /><br /><span className="data-covid">
+                                            {Number(parseInt(res.deaths)).toLocaleString('en')}</span></li>
+                                        <li className="data-details four" style={{ color: "green" }}>recovered <br /><br /><span className="data-covid">
+                                            {Number(parseInt(res.recovered)).toLocaleString('en')}</span></li>
                                     </ul>
                                 )
 
@@ -52,7 +61,8 @@ class Home extends Component {
                     </div>
                 </div>
                 <ul className="data-cards">
-                    <li className="data-vaccine" style={{ color: "#22bb33" }}>total vaccination administered <br /><br /><span className="data-covid">{this.state.vaccineCount}</span></li>
+                    <li className="data-vaccine" style={{ color: "#22bb33" }}>total vaccination administered <br /><br /><span className="data-covid">
+                        {Number(parseInt(this.state.vaccineCount)).toLocaleString('en')}</span></li>
                 </ul>
                 <CoviIndia />
             </>
