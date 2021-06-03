@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Loading from './Loading';
+import '../css/CoviIndia.css'
 
 class CoviIndia extends Component {
 
@@ -44,23 +45,20 @@ class CoviIndia extends Component {
         this.state.data.forEach(function (book) {
             // console.log(book)
             const content = book.state;
-            {
-                content.toLowerCase().indexOf(inside) !== -1 ?
-                    console.log(book.state) : <>null</>
+
+            if (content.toLowerCase().indexOf(inside) !== -1) {
+                // book.style.display = 'block';
+                console.log(book.state)
+                return (
+                    <h3>{book.state}</h3>
+                )
             }
-            // if (content.toLowerCase().indexOf(inside) !== -1) {
-            //     // book.style.display = 'block';
-            //     console.log(book.state)
-            //     return (
-            //         <h3>{book.state}</h3>
-            //     )
-            // }
-            // else {
-            //     // book.style.display = 'none';
-            //     return (
-            //         <h2>not</h2>
-            //     )
-            // }
+            else {
+                // book.style.display = 'none';
+                return (
+                    <h2>not</h2>
+                )
+            }
         });
     }
     render() {
@@ -70,24 +68,24 @@ class CoviIndia extends Component {
                     CoviIndia COvid
                     <input type="text" onChange={this.handleChange} id="searchState"
                         onKeyUp={this.handleSearch} placeholder="search" />
-                    <table style={{ width: "100%" }}>
+                    <table style={{ width: "70%", overflow: "scroll", margin: "10px auto" }}>
                         <tbody>
                             <tr>
-                                <th>State</th>
-                                <th>Confirmed</th>
-                                <th>Active</th>
-                                <th>Recovered</th>
-                                <th>Deaths</th>
+                                <th className="table-head">State/UT</th>
+                                <th className="table-head">Confirmed</th>
+                                <th className="table-head">Active</th>
+                                <th className="table-head">Recovered</th>
+                                <th className="table-head">Deceased</th>
                             </tr>
                             {this.state.data && this.state.data.map((res, ind) => {
                                 return (
                                     <tr key={ind}>
 
-                                        <th>{res.state}</th>
-                                        <td>{res.confirmed}</td>
-                                        <td>{res.active}</td>
-                                        <td>{res.recovered}</td>
-                                        <td>{res.deaths}</td>
+                                        <th className="state-head">{res.state}</th>
+                                        <td className="covid-confirmed">{res.confirmed}</td>
+                                        <td className="covid-active">{res.active}</td>
+                                        <td className="covid-recovered">{res.recovered}</td>
+                                        <td className="covid-deaths">{res.deaths}</td>
                                     </tr>
                                 )
                             })}

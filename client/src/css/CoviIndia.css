@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    padding:10px;
+  }
+  .covid-confirmed:hover{
+      background-color:rgba(255,7,58,.12549019607843137) ;
+  }
+  .covid-active:hover{
+    background-color:rgba(0, 123, 255, 0.125) ;
+}
+.covid-recovered:hover{
+    background-color: rgba(40,167,69,.12549019607843137);
+}
+.covid-deaths:hover{
+    background-color: rgba(108,117,125,.06274509803921569);
+}
+.state-head:hover{
+    background-color: aqua;
+}
+.table-head{
+    background-color:rgba(93, 100, 107, 0.063) ;
+}

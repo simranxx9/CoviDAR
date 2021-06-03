@@ -5,10 +5,12 @@ import Faqs from './components/Faqs';
 import News from './components/News';
 import CoviIndia from './components/CoviIndia';
 import PageNotFound from './components/PageNotFound';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/home" exact component={Home} />
