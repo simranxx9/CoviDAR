@@ -84,7 +84,10 @@ class Home extends Component {
         else {
             return (<>
                 <Loading />
-                <p style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}
+                <p style={{
+                    textAlign: "center", display: "flex",
+                    justifyContent: "center", alignItems: "center"
+                }}
                 >Loading...</p>
             </>
             )

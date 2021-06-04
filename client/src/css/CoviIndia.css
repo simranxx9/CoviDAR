@@ -1,5 +1,5 @@
 table, th, td {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding:10px;
   }
   .covid-confirmed:hover{
@@ -25,21 +25,56 @@ table, th, td {
     background-color:rgba(93, 100, 107, 0.063) ;
 }
 .input-search{
-    padding:10px;
-    display: flex;
-    justify-content: center;
-    margin:20px auto;
+    padding:8px;
+    outline: none;
+    border: none;
+    font-size: 20px;
 }
-::placeholder {
-    color:#22bb;
-    font-size: 18px;
-  }
+
   .state-data{
       width:40%;
       margin: auto;
   }
+  .table-data{
+      width:50%;
+      margin:auto
+  }
+  .search-box{
+      width:300px;
+      height:20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      border:.5px solid black ;
+      padding:10px;
+      margin: 20px auto;
+      background-color: #fff;
+  }
+  .search-box > i{
+      font-size: 18px;
+      color:#888;
+  }
+  .head-box{
+      margin-top: 20px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 10px;
+     
+    
+    }
+    .covid-india{
+    display: flex; 
+    flex-direction: row;
+     flex-wrap: wrap ;
+     margin: 0;
+     background: linear-gradient(25deg, #98f898 50%,#50c878 50%);
+    }
   @media screen and (max-width:1080px) {
       .state-data{
           width:100%
+      }
+      .table-data{
+          width: 100%;
       }
   }

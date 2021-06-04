@@ -1,3 +1,7 @@
+*:focus{
+    outline: none;
+}
+
 .data-cards{
     /* display: grid;
   grid-template-columns: repeat(5, auto);
@@ -39,7 +43,8 @@ padding: 40px;
     background:rgba(40,167,69,.12549019607843137);
 }
 .data-top{
-    position:relative
+    position:relative;
+    top: 0;
 }
 .data-back{
     width: 100%;

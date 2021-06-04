@@ -43,10 +43,10 @@ class CoviIndia extends Component {
     render() {
         if (this.state.data) {
             return (
-                <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+                <div className="covid-india">
                     <div className="state-data">
                         <div className="data-top">
-                            <h1 style={{ display: "flex", justifyContent: "center", textAlign: "center", margin: "20px auto", fontSize: "48px", fontWeight: "600" }}>{this.state.stateActive}</h1>
+                            <h1 style={{ display: "flex", textAlign: "center", justifyContent: "center", margin: "20px auto", fontSize: "48px", fontWeight: "600" }}>{this.state.stateActive}</h1>
                             {this.state.data && this.state.data.filter(res => res.state === this.state.stateActive).map((res, ind) => {
                                 return (<p key={ind}
                                     style={{ textAlign: "center", color: "#6c757d", margin: "20px 0" }}>last updated at {' '}<br />{res.lastupdatedtime}{' '}IST</p>)
@@ -73,44 +73,49 @@ class CoviIndia extends Component {
 
                         </div>
                     </div>
-                    <div>
-                        <h1 style={{ textAlign: "center", margin: "20px" }}>Statewise Data</h1>
-                        <input type="text" className="input-search"
-                            onChange={this.handleChange} id="searchState"
-                            placeholder="Search your state...    " />
-                        <table style={{ backgroundColor: "#fff", overflow: "scroll", margin: "10px auto" }}>
-                            <tbody>
-                                <tr>
-                                    <th className="table-head">State/UT</th>
-                                    <th className="table-head">Confirmed</th>
-                                    <th className="table-head">Active</th>
-                                    <th className="table-head">Recovered</th>
-                                    <th className="table-head">Deceased</th>
-                                </tr>
-                                {this.state.data && this.state.data.filter((res) => {
-                                    if (res.state.toLowerCase().includes(this.state.searchState.toLowerCase())) {
-                                        return res;
-                                    }
-                                    else if (this.state.searchState === "") {
-                                        return res;
-                                    }
+                    <div className="table-data">
+                        <h1 className="head-box">Search your state</h1>
+                        <div className="search-box">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="text" className="input-search"
+                                onChange={this.handleChange} id="searchState"
+                            />
+                        </div>
+                        <div style={{ height: "400px", overflow: "auto", marginBottom: "30px" }}>
+                            <table style={{ backgroundColor: "#fff", overflow: "scroll", margin: "10px auto" }}>
+                                <tbody>
+                                    <tr>
+                                        <th className="table-head">State/UT</th>
+                                        <th className="table-head">Confirmed</th>
+                                        <th className="table-head">Active</th>
+                                        <th className="table-head">Recovered</th>
+                                        <th className="table-head">Deceased</th>
+                                    </tr>
+                                    {this.state.data && this.state.data.filter((res) => {
+                                        if (res.state.toLowerCase().includes(this.state.searchState.toLowerCase())) {
+                                            return res;
+                                        }
+                                        else if (this.state.searchState === "") {
+                                            return res;
+                                        }
 
-                                })
-                                    .map((res, ind) => {
-                                        return (
-                                            <tr key={ind}>
+                                    })
+                                        .map((res, ind) => {
+                                            return (
+                                                <tr key={ind}>
 
-                                                <th className="state-head" onClick={() => this.handleClick({ res })} value={res.state}
-                                                >{res.state}</th>
-                                                <td className="covid-confirmed">{res.confirmed}</td>
-                                                <td className="covid-active">{res.active}</td>
-                                                <td className="covid-recovered">{res.recovered}</td>
-                                                <td className="covid-deaths">{res.deaths}</td>
-                                            </tr>
-                                        )
-                                    })}
-                            </tbody>
-                        </table>
+                                                    <th className="state-head" onClick={() => this.handleClick({ res })} value={res.state}
+                                                    >{res.state}</th>
+                                                    <td className="covid-confirmed">{Number(parseInt(res.confirmed)).toLocaleString('en')}</td>
+                                                    <td className="covid-active">{Number(parseInt(res.active)).toLocaleString('en')}</td>
+                                                    <td className="covid-recovered">{Number(parseInt(res.recovered)).toLocaleString('en')}</td>
+                                                    <td className="covid-deaths">{Number(parseInt(res.deaths)).toLocaleString('en')}</td>
+                                                </tr>
+                                            )
+                                        })}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             )
