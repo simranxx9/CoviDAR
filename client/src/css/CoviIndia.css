@@ -14,8 +14,12 @@ table, th, td {
 .covid-deaths:hover{
     background-color: rgba(108,117,125,.06274509803921569);
 }
+.state-head{
+    background-color:aquamarine;
+}
 .state-head:hover{
     background-color: aqua;
+    cursor: pointer;
 }
 .table-head{
     background-color:rgba(93, 100, 107, 0.063) ;
@@ -27,6 +31,15 @@ table, th, td {
     margin:20px auto;
 }
 ::placeholder {
-    color:#ff00ff;
+    color:#22bb;
     font-size: 18px;
+  }
+  .state-data{
+      width:40%;
+      margin: auto;
+  }
+  @media screen and (max-width:1080px) {
+      .state-data{
+          width:100%
+      }
   }
