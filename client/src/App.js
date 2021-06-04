@@ -6,6 +6,8 @@ import News from './components/News';
 import CoviIndia from './components/CoviIndia';
 import PageNotFound from './components/PageNotFound';
 import Navbar from './Navbar';
+import Query from './components/Query';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -17,9 +19,10 @@ function App() {
         <Route path="/faqs" exact component={Faqs} />
         <Route path="/news" exact component={News} />
         <Route path="/coviindia" exact component={CoviIndia} />
+        <Route path="/query" exact component={Query} />
         <Route component={PageNotFound} />
       </Switch>
-
+      <Footer />
     </Router>
   );
 }

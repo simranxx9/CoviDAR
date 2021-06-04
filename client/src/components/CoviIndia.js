@@ -76,7 +76,7 @@ class CoviIndia extends Component {
                     <div className="table-data">
                         <h1 className="head-box">Search your state</h1>
                         <div className="search-box">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <i className="fa fa-search" aria-hidden="true"></i>
                             <input type="text" className="input-search"
                                 onChange={this.handleChange} id="searchState"
                             />
