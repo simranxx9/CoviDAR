@@ -17,7 +17,7 @@ export class Faqs extends Component {
     render() {
         return (
             <div>
-                <div className="search-box">
+                <div className="search-box" style={{ marginTop: "40px" }}>
                     <i className="fa fa-search" aria-hidden="true"></i>
                     <input type="text" className="input-search"
                         onChange={this.handleChange} id="searchState"

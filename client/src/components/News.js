@@ -25,7 +25,7 @@ export class News extends Component {
             .catch(err => {
                 console.error(err);
             });
-
+        console.log(res)
 
     }
     componentDidMount() {
