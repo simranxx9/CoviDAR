@@ -82,7 +82,11 @@ class CoviIndia extends Component {
                             />
                         </div>
                         <div style={{ height: "400px", overflow: "auto", marginBottom: "30px" }}>
-                            <table style={{ backgroundColor: "#fff", overflow: "scroll", margin: "10px auto" }}>
+                            <table style={{
+                                backgroundColor: "#fff",
+                                borderSpacing: "15px",
+                                overflow: "scroll", margin: "10px auto"
+                            }}>
                                 <tbody>
                                     <tr>
                                         <th className="table-head">State/UT</th>

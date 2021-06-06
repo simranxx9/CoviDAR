@@ -1,18 +1,32 @@
 import React, { Component } from 'react'
+import '../css/Faqs.css'
+import Accordion from 'react-bootstrap/Accordion'
+import Card from 'react-bootstrap/Card'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export class Faqs extends Component {
     state = {
         faqs: [
-            { 'question': "how are you", 'answer': "fine" },
-            { 'question': "how are you", 'answer': "fine" },
-            { 'question': "how are you", 'answer': "fine" }
+            { 'key': 1, 'question': "how are you", 'answer': "fine" },
+            { 'key': 2, 'question': "how are you", 'answer': "fine" },
+            { 'key': 3, 'question': "how are you", 'answer': "fine" },
+            { 'key': 4, 'question': "how are you", 'answer': "fine" },
+            { 'key': 5, 'question': "how are you", 'answer': "fine" }
+
+
         ],
-        searchState: ""
+        searchState: "",
+        isActive: false,
+        keyAns: 0
     }
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
+    }
+    handleClick = (e) => {
+        e.preventDefault()
     }
     render() {
         return (
@@ -22,7 +36,13 @@ export class Faqs extends Component {
                     <input type="text" className="input-search"
                         onChange={this.handleChange} id="searchState"
                     />
+
                 </div>
+                <div className="container-fluid">
+                    <h3 className="faqs-name">Frequently Asked Questions(FAQS)</h3>
+                </div>
+
+
                 {this.state.faqs.filter((res) => {
                     if (res.question.toLowerCase().includes(this.state.searchState.toLowerCase())) {
                         return res;
@@ -35,10 +55,35 @@ export class Faqs extends Component {
                 })
                     .map((res, ind) => {
                         return (
-                            <ul key={ind}>
-                                <li>{res.question}</li>
-                                <li>{res.answer}</li>
-                            </ul>
+                            <>
+                                <Accordion>
+                                    <Card>
+                                        <Accordion.Toggle eventKey={res.key} style={{ background: "#fff" }}>
+                                            <div style={{ textAlign: "left", padding: "10px" }} >
+
+                                                <h3><span style={{ color: "#000" }}>Q.{' '}</span>{res.question}</h3>
+                                            </div>
+                                        </Accordion.Toggle>
+                                        <Accordion.Collapse eventKey={res.key}>
+                                            <div className='panel'>
+
+                                                <p>{res.answer}</p>
+                                            </div>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                </Accordion>
+                                {/* <div className="container-fluid" key={res.key}>
+
+                                <div className="accordion" >
+                                    <div className="icon" onClick={() => this.handleClick(res)}></div>
+                                    <h3><span style={{ color: "#000" }}>Q.{' '}</span>{res.question}</h3>
+                                </div>
+                                <div className={this.state.isActive ? 'panel-active' : 'panel'}>
+
+                                    <p>{res.answer}</p>
+                                </div>
+                            </div> */}
+                            </>
                         )
                     })}
             </div>
