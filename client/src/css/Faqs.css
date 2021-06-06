@@ -12,68 +12,33 @@
     margin: 30px auto;
     text-align: center;
 }
-.container-fluid h3::after{
-    content: "";
-    position: absolute;
-    bottom:0;
-    right: 22px;
-    width: 67px;
-    height: 2px;
-    background-color: darkcyan;
-}
+
 .accordion{
     text-align: left;
     width: 70%;
     margin:10px auto;
     border-radius: 30px;
 }
-.accordion > h3{
-    border:1px solid cyan;
-    /* border-radius: 30px; */
-    padding: 15px;
-    background-color: #98f898;
-    color:#fff;
-    width: 100%;
 
-}
-.icon::after{
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    position: relative;
-    top:10px;
-    color: #fff !important;
-    float: right;
-    right:10px;
-    margin-left: 5px;
-    border:1px solid cyan;
-    border-radius: 10px;
-    padding: 5px;
-    cursor:pointer
-}
 .panel {
     position: relative;
     padding:0 15px;
     left: 60px;
     margin:10px 0;
-    border-left: 1px solid cyan;
+    border-left: 3px solid cyan;
     overflow: hidden;
     /* max-height: 200px; */
-    width: 90%;
+    width: 80%;
 }
-.panel-active{
-    position: relative;
-    padding:0 15px;
-    left: 60px;
-    margin:10px 0;
-    border-left: 1px solid cyan;
-    overflow: hidden;
-    max-height: 200px;
 
-}
 
 @media screen and (max-width:980px) {
     .container-fluid{
         width:100%;
         margin:20px 10px;
+    }
+    .accordion{
+        text-align: left;
+        width: 100%;
     }
 }

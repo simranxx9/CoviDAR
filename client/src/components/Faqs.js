@@ -55,35 +55,23 @@ export class Faqs extends Component {
                 })
                     .map((res, ind) => {
                         return (
-                            <>
-                                <Accordion>
-                                    <Card>
-                                        <Accordion.Toggle eventKey={res.key} style={{ background: "#fff" }}>
-                                            <div style={{ textAlign: "left", padding: "10px" }} >
 
-                                                <h3><span style={{ color: "#000" }}>Q.{' '}</span>{res.question}</h3>
-                                            </div>
-                                        </Accordion.Toggle>
-                                        <Accordion.Collapse eventKey={res.key}>
-                                            <div className='panel'>
+                            <Accordion key={res.key}>
+                                <Card>
+                                    <Accordion.Toggle eventKey={res.key} style={{ background: "#fff" }}>
+                                        <div style={{ textAlign: "left", padding: "10px" }} >
 
-                                                <p>{res.answer}</p>
-                                            </div>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                </Accordion>
-                                {/* <div className="container-fluid" key={res.key}>
+                                            <h3><span style={{ color: "#000", fontWeight: "bold " }}>Q.{' '}</span>{res.question}</h3>
+                                        </div>
+                                    </Accordion.Toggle>
+                                    <Accordion.Collapse eventKey={res.key}>
+                                        <div className='panel'>
 
-                                <div className="accordion" >
-                                    <div className="icon" onClick={() => this.handleClick(res)}></div>
-                                    <h3><span style={{ color: "#000" }}>Q.{' '}</span>{res.question}</h3>
-                                </div>
-                                <div className={this.state.isActive ? 'panel-active' : 'panel'}>
-
-                                    <p>{res.answer}</p>
-                                </div>
-                            </div> */}
-                            </>
+                                            <p>{res.answer}</p>
+                                        </div>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         )
                     })}
             </div>
