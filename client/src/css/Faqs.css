@@ -4,11 +4,11 @@
     /* text-align: center; */
     
 }
-.container-fluid>h3{
-    color:darkcyan;
+.container-fluid>h2{
+    color:#98f898;
     position:relative;
     width: 23rem;
-    
+    font-weight: 600;
     margin: 30px auto;
     text-align: center;
 }
@@ -31,7 +31,16 @@
     width: 80%;
 }
 
+.faqs-container{
+width:50%;
+background-color: #000;
+}
+.forms-container{
+    width:45%;
+    margin: auto;
+    margin:20px;
 
+}
 @media screen and (max-width:980px) {
     .container-fluid{
         width:100%;
@@ -41,4 +50,11 @@
         text-align: left;
         width: 100%;
     }
+    .faqs-container{
+        width: 100%;
+    }
+    .forms-container{
+        width:90%;
+    }
+
 }
