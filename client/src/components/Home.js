@@ -33,7 +33,7 @@ class Home extends Component {
                     <div className="data-jumbo">
                         <div className="data-back"><img src={back} alt="" className="data-back-img" /></div>
                         <div className="data-jumbo-detail">
-                            <h2>CORONA VIRUS(Covid19)</h2>
+                            <h2>Covid19(Corona Virus Desease)</h2>
                             <p>SARS-Cov-2 Virus</p>
                         </div>
                         <div className="data-top">

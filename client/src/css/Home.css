@@ -73,7 +73,7 @@ padding: 40px;
     left: 50px;
     color: #fff;
     font-size: 24px;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: sans-serif;
 
 }
@@ -83,10 +83,13 @@ padding: 40px;
     margin:20px;
     color: #fff;
     font-size: 24px;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: sans-serif;
     opacity: 1;
 
+}
+.data-jumbo-detail>h2{
+    font-weight: 600;
 }
 .data-covid{
     font-size: 24px;
