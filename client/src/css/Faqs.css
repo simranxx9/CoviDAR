@@ -19,7 +19,13 @@
     margin:10px auto;
     border-radius: 30px;
 }
-
+.input-search{
+    
+    outline: none !important;
+    border: none !important;
+    font-size: 20px !important;
+    margin: 1px !important;
+}
 .panel {
     position: relative;
     padding:0 15px;
@@ -41,6 +47,7 @@ background-color: #000;
     margin:20px;
 
 }
+
 @media screen and (max-width:980px) {
     .container-fluid{
         width:100%;

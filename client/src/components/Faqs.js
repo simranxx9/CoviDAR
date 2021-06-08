@@ -40,7 +40,7 @@ export class Faqs extends Component {
                 <Forms />
 
                 <div className="faqs-container">
-                    <h1 className="head-box" style={{ color: "#50c878", padding: "10px", margin: "0", fontSize: "16px" }}>Search your question</h1>
+                    <h1 className="head-box" style={{ color: "#98f898", padding: "10px", margin: "0", fontSize: "16px" }}>Search your question</h1>
                     <div className="search-box">
                         <i className="fa fa-search" aria-hidden="true"></i>
                         <input type="text" className="input-search"
