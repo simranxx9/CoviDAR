@@ -11,7 +11,7 @@ app.use(Cors)
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
-const con_url = `mongodb+srv://admin:FLmZMZSdYqrzplCD@cluster0.npz8b.mongodb.net/mySecondDatabase?retryWrites=true&w=majority`
+const con_url = `mongodb+srv://admin:FLmZMZSdYqrzplCD@cluster0.npz8b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 mongoose.connect(process.env.MONGODB_URI || con_url, {
     useNewUrlParser: true,
     useCreateIndex: true,
