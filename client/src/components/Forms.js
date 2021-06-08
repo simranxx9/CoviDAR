@@ -18,7 +18,22 @@ class Forms extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.state)
+        console.log(this.state);
+        const data = new FormData();
+
+        data.append('name', this.state.name);
+        data.append('query', this.state.query);
+        data.append('email', this.state.email)
+        data.append('mobileNumber', this.state.mobileNumber)
+        data.append('address', this.state.address)
+
+        fetch(`http://localhost:8080/queries`, {
+
+            method: "Post",
+            body: data
+        })
+            .then(() => alert("Received"))
+            .catch(err => console.log(err))
     }
     render() {
         return (
@@ -57,7 +72,8 @@ class Forms extends Component {
 
                     <div className="input-field">
                         <label htmlFor="mobileNumber">Number</label>
-                        <input type="number" id="mobileNumber" min="10" max="10"
+                        <input type="tel" minLength="10" maxLength="10"
+                            id="mobileNumber"
                             onChange={this.handleChange}
                             required
                         />
