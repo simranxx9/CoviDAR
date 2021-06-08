@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import '../css/Faqs.css'
 
 class Forms extends Component {
@@ -18,21 +19,16 @@ class Forms extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.state);
-        const data = new FormData();
 
-        data.append('name', this.state.name);
-        data.append('query', this.state.query);
-        data.append('email', this.state.email)
-        data.append('mobileNumber', this.state.mobileNumber)
-        data.append('address', this.state.address)
+        axios.post(`http://localhost:8080/queries`, this.state)
+            .then(json => {
 
-        fetch(`http://localhost:8080/queries`, {
 
-            method: "Post",
-            body: data
-        })
-            .then(() => alert("Received"))
+                // console.log(json)
+
+
+                alert('Thanks for your Query! We will respond you soon!')
+            })
             .catch(err => console.log(err))
     }
     render() {
