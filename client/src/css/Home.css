@@ -83,12 +83,15 @@ padding: 40px;
     margin:20px;
     color: #fff;
     font-size: 24px;
-    /* font-weight: 600; */
+    font-weight: 600 !important;
     font-family: sans-serif;
     opacity: 1;
 
 }
 .data-jumbo-detail>h2{
+    font-weight: 600;
+}
+.data-jumbo-detail2>h2{
     font-weight: 600;
 }
 .data-covid{
