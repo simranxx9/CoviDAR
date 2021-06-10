@@ -14,8 +14,8 @@ export class Faqs extends Component {
             { 'key': 3, 'question': "Why SARS-Cov-2", 'answer': "The International Committee on Taxonomy of Viruses (ICTV) who generally names the viruses termed it as SARS-Cov-2 because the virus is genetically related to the coronavirus that caused the SARS outbreak in 2003. Despite this genetic link, the viruses are distinct from each other." },
             { 'key': 7, 'question': "Why it is Covid19", 'answer': "The first case of corona virus was seen in Wuhan,China in December,2019" },
             { 'key': 8, 'question': "What are the symptoms of Covid19", 'answer': "Symtoms include fever, cough, cold, loss of smelling sense, breathing difficulty, and fatigueness." },
-            { 'key': 4, 'question': "How to reqister for vaccination", 'answer': "fine" },
-            { 'key': 5, 'question': "how are you", 'answer': "fine" },
+            { 'key': 4, 'question': "How to register for vaccination", 'answer': "You can log into the Co-WIN portal using the link\n www.cowin.gov.in \nand click on the “Register/Sign In yourself” tab to register for the COVID-19 vaccination." },
+            { 'key': 5, 'question': "Which all vaccines India has", 'answer': "CovidShield, Covaxin, Sputnik V" },
             { 'key': 6, 'question': "how are you", 'answer': "fine" }
 
 

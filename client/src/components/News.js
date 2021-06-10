@@ -5,27 +5,20 @@ export class News extends Component {
         data: '',
 
     }
-    async getCovidData() {
-        const res = await fetch("https://corona-updates.p.rapidapi.com/", {
+    getCovidData() {
+        fetch("https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True", {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "cf20b9aaf7msh6ca24058bbdb5aap1abc80jsn5fcd4f5a5c31",
-                "x-rapidapi-host": "corona-updates.p.rapidapi.com"
+                "x-rapidapi-host": "covid-19-news.p.rapidapi.com"
             }
         })
-
             .then(response => {
                 console.log(response);
-                const resData = response;
-                console.log(resData)
-                this.setState({
-                    data: resData
-                })
             })
             .catch(err => {
                 console.error(err);
             });
-        console.log(res)
 
     }
     componentDidMount() {
