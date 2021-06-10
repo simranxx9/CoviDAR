@@ -57,21 +57,23 @@ function Navbar() {
 
                         <li className='nav-item'>
                             <Link
-                                to='/query'
-                                className='nav-links'
-                                onClick={closeMobileMenu}
-                            >
-                                Query
-              </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link
                                 to='/faqs'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                FAQS
+                                Faqs
               </Link>
+                        </li>
+                        <li >
+                            <a href="https://selfregistration.cowin.gov.in/"
+                                onClick={closeMobileMenu}
+                            >
+
+                                <button className="btn green lighten-1 z-depth-0"
+                                    style={{ textTransform: "capitalize" }}>
+                                    BookVaccine</button>
+
+                            </a>
                         </li>
 
 
