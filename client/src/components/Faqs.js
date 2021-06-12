@@ -15,8 +15,13 @@ export class Faqs extends Component {
             { 'key': 7, 'question': "Why it is Covid19", 'answer': "The first case of corona virus was seen in Wuhan,China in December,2019" },
             { 'key': 8, 'question': "What are the symptoms of Covid19", 'answer': "Symtoms include fever, cough, cold, loss of smelling sense, breathing difficulty, and fatigueness." },
             { 'key': 4, 'question': "How to register for vaccination", 'answer': "You can log into the Co-WIN portal using the link\n www.cowin.gov.in \nand click on the “Register/Sign In yourself” tab to register for the COVID-19 vaccination." },
-            { 'key': 5, 'question': "Which all vaccines India has", 'answer': "CovidShield, Covaxin, Sputnik V" },
-            { 'key': 6, 'question': "how are you", 'answer': "fine" }
+            { 'key': 5, 'question': "How many vaccines are there for Covid 19 in India", 'answer': "India has authorized three COVID-19 vaccines: Covaxin, developed by Bharat Biotech. Covishield, developed by Oxford/AstraZeneca. Sputnik V, developed by the Gamaleya Research Institute of Epidemiology and Microbiology, Russia." },
+            { 'key': 6, 'question': "Which institute discovered covidshied along with Oxford/AstraZaneca", 'answer': "Serum Institute of India, Pune" }
+            , { 'key': 9, 'question': "Which drug is developed by DRDO", 'answer': "2-DG(2-Deoxy-D-Glucose) and it is taken orally." },
+            { 'key': 10, 'question': "Name the rapid antigen self test kit", 'answer': `CoviSelf made by MyLab and it costs ₹250 and you can purchase it by visiting https://www.flipkart.com/mylab-coviself-covid-19-rapid-antigen-self-test-kit/p/itm4d34ea09cad97 ` },
+            // { 'key': 10, 'question': "", 'answer': "" },
+            // { 'key': 10, 'question': "", 'answer': "" },
+            // { 'key': 10, 'question': "", 'answer': "" }
 
 
         ],
@@ -80,7 +85,7 @@ export class Faqs extends Component {
                                         <Accordion.Collapse eventKey={res.key}>
                                             <div className='panel'>
 
-                                                <p>{res.answer}</p>
+                                                <p style={{ textTransform: "none" }}>{res.answer}</p>
                                             </div>
                                         </Accordion.Collapse>
                                     </Card>
