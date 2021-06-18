@@ -5,3 +5,5 @@
  ---
 > Start integrating
 > * Put some styles
+
+> Style news
