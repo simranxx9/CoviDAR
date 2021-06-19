@@ -7,3 +7,4 @@
 > * Put some styles
 
 > Style news
+> Add full article with pic
