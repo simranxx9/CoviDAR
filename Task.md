@@ -9,4 +9,4 @@
 > Style news
 > Add full article with pic
 ---
-> Try fetching Indian news also
+> Try fetching Indian news
