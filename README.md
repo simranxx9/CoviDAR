@@ -1,1 +1,4 @@
 # CoviDAR
+
+---
+Covid Tracking App
