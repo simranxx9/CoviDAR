@@ -12,4 +12,4 @@ Covid Tracking App
 
  * What makes it different from other similar aaps
 
-> Along with FAQS now user can ask there queries which is responsed back to them at the earliest.
+> Along with FAQS, now user can ask there queries which is responsed back to them at the earliest.
