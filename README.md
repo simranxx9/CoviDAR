@@ -1,7 +1,7 @@
 # CoviDAR
 
 ---
-Covid Tracking App
+Corona Tracker
 ---
 ### Features
 > Know latest status of corona in your state.
